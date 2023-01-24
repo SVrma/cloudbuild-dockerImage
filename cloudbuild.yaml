@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/basic-tube-373302/Apacheimage', '.']
+  args: ['build', '-t', 'gcr.io/basic-tube-373302/Apacheimage', '-f', 'Dockerfile']
 options:
     sourceProvenanceHash: ['SHA256']
 
