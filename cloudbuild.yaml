@@ -1,0 +1,16 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/basic-tube-373302/Apacheimage', '.']
+options:
+    sourceProvenanceHash: ['SHA256']
+
+steps:
+- name: 'gcr.io/cloud-builders/docker'   
+  args: ['push', 'gcr.io/basic-tube-373302/Apacheimage'] 
+
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'test image', '--image','gcr.io/basic-tube-373302/Apacheimage', '--region','us-central1 ','--platform','managed', '--allow-unauthenticated' ]  
+
+images: 
+   - gcr.io/basic-tube-373302/Apacheimage
