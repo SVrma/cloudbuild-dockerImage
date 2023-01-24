@@ -1,5 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
+
     args: ['build', '-t', 'gcr.io/basic-tube-373302/apacheimage-release', '.']
 
   - name: 'gcr.io/cloud-builders/docker'   
