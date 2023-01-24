@@ -1,10 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/basic-tube-373302/apacheimage', '.']
+    args: ['build', '-t', 'gcr.io/basic-tube-373302/apacheimage-main', '.']
 
   - name: 'gcr.io/cloud-builders/docker'   
-    args: ['push', 'gcr.io/basic-tube-373302/apacheimage'] 
+    args: ['push', 'gcr.io/basic-tube-373302/apacheimage-main'] 
 
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'testimage', '--image','gcr.io/basic-tube-373302/apacheimage','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
+    args: ['run', 'deploy', 'shailendra-main', '--image','gcr.io/basic-tube-373302/apacheimage-main','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
 
