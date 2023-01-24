@@ -6,5 +6,5 @@ steps:
     args: ['push', 'gcr.io/basic-tube-373302/apacheimage'] 
 
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'testimage', '--image','gcr.io/basic-tube-373302/apacheimage','port','80', '--region','asia-east2','--platform','managed', '--allow-unauthenticated' ]  
+    args: ['run', 'deploy', 'testimage', '--image','gcr.io/basic-tube-373302/apacheimage','port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
 
