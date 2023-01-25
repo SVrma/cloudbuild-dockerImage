@@ -9,8 +9,8 @@ steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['run', 'deploy', 'shailendra-release', '--image','gcr.io/basic-tube-373302/apacheimage-release','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
 
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['checkout', 'develop']
+  # - name: 'gcr.io/cloud-builders/git'
+  #   args: ['checkout', 'develop']
 
   - name: python
     entrypoint: /bin/bash
