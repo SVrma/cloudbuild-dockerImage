@@ -18,7 +18,14 @@ steps:
   #   args: ['checkout','develop']
 
   # - name: 'gcr.io/cloud-builders/git'
-  #   args: [ 'tag ','v0.1']  
+  #   args: [ 'tag ','v0.1'] 
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['config','user.name',] 
+   
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['config','user.name','SVrma'] 
   
   - name: 'gcr.io/cloud-builders/git'
     args: ['push','--set-upstream','origin','master']  
