@@ -26,6 +26,9 @@ steps:
 
   - name: 'gcr.io/cloud-builders/git'
     args: ['config','user.name','SVrma'] 
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['config','user.password','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']   
   
   - name: 'gcr.io/cloud-builders/git'
     args: ['push','--set-upstream','origin','master']  
