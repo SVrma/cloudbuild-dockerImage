@@ -21,7 +21,7 @@ steps:
   #   args: [ 'tag ','v0.1']  
   
   - name: 'gcr.io/cloud-builders/git'
-    args: ['push']  
+    args: ['push','--set-upstream','origin','master']  
   
     
        
