@@ -31,7 +31,7 @@ steps:
     args: ['config','user.password','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']   
   
   - name: 'gcr.io/cloud-builders/git'
-    args: ['push','--set-upstream','origin','master']  
+    args: ['push','https://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@github.com/SVrma/cloudbuild-dockerImage.git']  
   
     
        
