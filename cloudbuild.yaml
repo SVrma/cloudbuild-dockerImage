@@ -18,7 +18,7 @@ steps:
   #   args: ['checkout','develop']
 
   - name: 'gcr.io/cloud-builders/git'
-    args: ['tag ','v0.1']  
+    args: ['git', 'tag ','v0.1']  
   
   - name: 'gcr.io/cloud-builders/git'
     args: ['push', 'origin', '--tags']  
