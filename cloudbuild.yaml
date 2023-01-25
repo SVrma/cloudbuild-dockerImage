@@ -12,7 +12,7 @@ steps:
   # - name: 'gcr.io/cloud-builders/git'
   #   args: ['checkout', 'develop']
 
-  - name: python
+  - name: gcr.io/cloud-builders/git 
     entrypoint: /bin/bash
     args: 
     - -ceux
