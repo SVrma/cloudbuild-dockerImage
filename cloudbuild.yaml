@@ -12,12 +12,13 @@ steps:
   # - name: 'gcr.io/cloud-builders/git'
   #   args: ['checkout', 'develop']
 
-  - name: gcr.io/cloud-builders/git 
+  - name: bash
     entrypoint: /bin/bash
     args: 
     - -ceux
     - |
-      git checkout develop
-      git tag v1.0.1
-      git push origin --tags
+      echo $(git branch)    
+      #  git checkout develop
+      #  git tag v1.0.1
+      #  git push origin --tags
       
