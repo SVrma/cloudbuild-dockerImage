@@ -13,8 +13,17 @@ steps:
 
   - name: 'gcr.io/cloud-builders/git'
     args: ['branch'] 
+
   - name: 'gcr.io/cloud-builders/git'
-    args: ['develop','checkout']
+    args: ['checkout','develop']
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['tag ','v0.1']  
+  
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['push', 'origin', '--tags']  
+  
+    
        
       #  git checkout develop
       #  git tag v1.0.1
