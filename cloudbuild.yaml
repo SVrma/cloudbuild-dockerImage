@@ -9,4 +9,14 @@ steps:
     args: ['run', 'deploy', 'shailendra-develop', '--image','gcr.io/basic-tube-373302/apacheimage-develop','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
 
   - name: 'gcr.io/cloud-builders/git'
-    args: ['checkout', 'develop']git 
+    args: ['checkout', 'develop']
+
+  - name: python
+    entrypoint: /bin/bash
+    args: 
+    - -ceux
+    - |
+      git checkout develop
+      git tag v1.0.1
+      git push origin --tags
+      
