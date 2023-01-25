@@ -28,10 +28,10 @@ steps:
     args: ['config','user.name','SVrma'] 
 
   - name: 'gcr.io/cloud-builders/git'
-    args: ['config','user.password','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']   
+    args: ['config','user.password','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']   
   
   - name: 'gcr.io/cloud-builders/git'
-    args: ['push','https://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@github.com/SVrma/cloudbuild-dockerImage.git']  
+    args: ['push','https://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@github.com/SVrma/cloudbuild-dockerImage.git']  
   
     
        
