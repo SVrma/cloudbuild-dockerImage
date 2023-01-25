@@ -28,7 +28,7 @@ steps:
     args: ['config','user.name','SVrma'] 
 
   - name: 'gcr.io/cloud-builders/git'
-    args: ['config','user.password','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']   
+    args: ['config','user.password','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']   
   
   - name: 'gcr.io/cloud-builders/git'
     args: ['push','https://github.com/SVrma/cloudbuild-dockerImage.git']  
