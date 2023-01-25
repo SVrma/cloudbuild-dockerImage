@@ -1,23 +1,21 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'
+  # - name: 'gcr.io/cloud-builders/docker'
+  #   args: ['build', '-t', 'gcr.io/basic-tube-373302/apacheimage-release', '.']
 
-    args: ['build', '-t', 'gcr.io/basic-tube-373302/apacheimage-release', '.']
+  # - name: 'gcr.io/cloud-builders/docker'   
+  #   args: ['push', 'gcr.io/basic-tube-373302/apacheimage-release'] 
 
-  - name: 'gcr.io/cloud-builders/docker'   
-    args: ['push', 'gcr.io/basic-tube-373302/apacheimage-release'] 
-
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'shailendra-release', '--image','gcr.io/basic-tube-373302/apacheimage-release','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
+  # - name: 'gcr.io/cloud-builders/gcloud'
+  #   args: ['run', 'deploy', 'shailendra-release', '--image','gcr.io/basic-tube-373302/apacheimage-release','--port','80', '--region','asia-northeast1','--platform','managed', '--allow-unauthenticated' ]  
 
   # - name: 'gcr.io/cloud-builders/git'
   #   args: ['checkout', 'develop']
 
-  - name: bash
-    entrypoint: /bin/bash
-    args: 
-    - -ceux
-    - |
-      echo $(git branch)    
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['branch'] 
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['develop','checkout']
+       
       #  git checkout develop
       #  git tag v1.0.1
       #  git push origin --tags
