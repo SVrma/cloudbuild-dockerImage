@@ -39,10 +39,15 @@ steps:
     - '-c'
     - |
       echo "Cloning repo ..."
+      git clone --depth 1 git@github.com:SVrma/cloudbuild-dockerImage
       git checkout master
       git config --global user.name SVrma
       git config --global user.email mxx.verma@gmail.com
+      git add -A
+      git commit -m "Updated with build ${BUILD_ID} from ${REPO_NAME} commit ${COMMIT_SHA}"
       git tag v1.0.1
+      echo "tag generated"
+      git push origin master
       git push origin --tags
     
   
