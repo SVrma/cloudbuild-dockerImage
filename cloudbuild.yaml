@@ -27,15 +27,23 @@ steps:
   - name: 'gcr.io/cloud-builders/git'
     args: ['config','user.name','SVrma'] 
 
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['config','user.password','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']   
+  # - name: 'gcr.io/cloud-builders/git'
+  #   args: ['config','user.password','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']   
   
-  - name: 'gcr.io/cloud-builders/git'
-    args: ['push','https://github.com/SVrma/cloudbuild-dockerImage.git']  
+  # - name: 'gcr.io/cloud-builders/git'
+  #   args: ['push','https://github.com/SVrma/cloudbuild-dockerImage.git']  
+
+  - name: gcr.io/cloud-builders/git
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - |
+      echo "Cloning repo ..."
+      git checkout master
+      git tag v1.0.1
+      git push origin --tags
+    
   
     
        
-      #  git checkout develop
-      #  git tag v1.0.1
-      #  git push origin --tags
-      
+    
