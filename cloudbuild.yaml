@@ -38,10 +38,10 @@ steps:
     args:
     - '-c'
     - |
-      sudo apt update 
-      sudo apt install git 
+      apt update 
+      apt install git 
       echo "Cloning repo ..."
-      git clone --depth 1 https://github.com/SVrma/cloudbuild-dockerImage.git
+      git clone  https://github.com/SVrma/cloudbuild-dockerImage.git
       cd cloudbuild-dockerImage
       echo ${_TOKEN}
       git config --global user.password ${_TOKEN}
