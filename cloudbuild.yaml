@@ -52,6 +52,7 @@ steps:
       git commit -m "Updated with build ${BUILD_ID} from ${REPO_NAME} commit ${COMMIT_SHA}"
       git tag v1.0.1
       echo "tag generated"
+      echo "${BUILD_ID} from ${REPO_NAME} commit ${COMMIT_SHA}"
       git push origin main
       git push --tags https://SVrma:${_TOKEN}@github.com/SVrma/cloudbuild-dockerImage.git
     
