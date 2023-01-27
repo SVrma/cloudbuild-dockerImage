@@ -40,6 +40,8 @@ steps:
     - |
       echo "Cloning repo ..."
       git checkout master
+      git config --global user.name SVrma
+      git config --global user.email mxx.verma@gmail.com
       git tag v1.0.1
       git push origin --tags
     
