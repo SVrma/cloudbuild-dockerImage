@@ -41,6 +41,7 @@ steps:
       echo "Cloning repo ..."
       git clone --depth 1 git@github.com:SVrma/cloudbuild-dockerImage
       cd cloudbuild-dockerImage
+      git config --global user.password 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
       git checkout main
       git config --global user.name SVrma
       git config --global user.email mxx.verma@gmail.com
