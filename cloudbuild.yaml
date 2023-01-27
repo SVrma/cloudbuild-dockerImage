@@ -50,7 +50,7 @@ steps:
       git commit -m "Updated with build ${BUILD_ID} from ${REPO_NAME} commit ${COMMIT_SHA}"
       git tag v1.0.1
       echo "tag generated"
-      git push origin master
+      git push origin main
       git push origin --tags
     
   
