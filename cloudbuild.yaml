@@ -39,7 +39,7 @@ steps:
     - '-c'
     - |
       apt update 
-      apt install git 
+      apt install git -y
       echo "Cloning repo ..."
       git clone  https://github.com/SVrma/cloudbuild-dockerImage.git
       cd cloudbuild-dockerImage
